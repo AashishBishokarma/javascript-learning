@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+    <title>07 exercise </title>
+    <body>
+        <script>
+            // 7a,b,c
+            function greet(name){
+                
+                if(!name){
+                    console.log('hello there');
+                }else{
+                   console.log(`Hello ${name}`);
+                }
+            }
+            greet('warlord');
+            greet();
+
+            // 7d
+            function convertToFahrenheit(celsius){
+                console.log((celsius * 9/5) +32);
+            }
+            convertToFahrenheit(25);
+
+            //7e
+            function convertToCelcius(fahrenheit){
+                console.log((fahrenheit-32)*5/9)
+            }
+            convertToCelcius(86);
+            
+            //7f
+            function convertTemperature(degree,unit)
+            {
+                if(unit==='C'){
+                    return((degree * 9/5)+32)+'F';
+                }
+                else if(unit === 'F'){
+                    return(degree - 32)*5/9+'C';
+                }
+            }
+
+            let celsiusResult = convertTemperature(30, 'C');
+            console.log(celsiusResult); 
+
+            let fahrenheitResult = convertTemperature(75, 'F');
+            console.log(fahrenheitResult);
+
+            convertTemperature(45,'F');
+
+            //7g
+            function convertLength(length, from , to)
+            {
+                if(from === 'km' && to === 'mile')
+                {
+                    return `${1/1.6 * length} mile `;
+
+                }
+                else if (from === 'mile' && to === 'km')
+                {
+                    return `${1.6 * length} km`;
+                }
+                else if ( from === to)
+                {
+                    if (from===to)
+                    return `${length} km`
+                    else
+                    return `${length} mile`
+                }
+            }
+
+            let Conversion1 = convertLength(50 , 'mile', 'km')
+            console.log(Conversion1);
+
+            Conversion2 = convertLength(32 , 'km', 'mile')
+            console.log(Conversion2);
+
+            Conversion3 = convertLength(50 , 'km', 'km')
+            console.log(Conversion3);
+
+            //7h
+            function convertLength(length, from , to)
+            {
+                if(from === 'km' && to === 'mile')
+                {
+                    return `${1/1.6 * length} mile `;
+
+                }
+                else if (from === 'mile' && to === 'km')
+                {
+                    return `${1.6 * length} km`;
+                }
+                else if ( from === to)
+                {
+                    if (from===to)
+                    return `${length} km`
+                    else
+                    return `${length} mile`
+                }
+                else if (from === 'mile' && to==='feet')
+                {
+                    return `${length * 5280} feet`
+                }
+                else if (from === 'km' && to==='feet')
+                {
+                    return `${length * 3281} feet`
+                }
+            }
+
+            Conversion4 = convertLength(5 , 'mile', 'km')
+            console.log(Conversion4);
+
+            Conversion5 = convertLength(5 , 'mile', 'feet')
+            console.log(Conversion5);
+
+            Conversion6 = convertLength(5 , 'km', 'feet')
+            console.log(Conversion6);
+
+            //7i
+            function convertLength(length, from , to)
+            {
+                if(from === 'km' && to === 'mile')
+                {
+                    return `${1/1.6 * length} mile `;
+
+                }
+                else if (from === 'mile' && to === 'km')
+                {
+                    return `${1.6 * length} km`;
+                }
+                else if ( from === to || from !== to)
+                {
+                    if (from==='km')
+                    return `${length} km`
+                    else if(from === 'mile')
+                    return `${length} mile`
+                    else 
+                    return `invalid unit : ${from} `
+                }
+                else if (from === 'mile' && to==='feet')
+                {
+                    return `${length * 5280} feet`
+                }
+                else if (from === 'km' && to==='feet')
+                {
+                    return `${length * 3281} feet`
+                }
+            }
+
+            Conversion7 = convertLength(5 , 'lb', 'lb')
+            console.log(Conversion7);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <header>
+        <title>L9 exercise</title>
+    </header>
+
+    <body>
+
+        <!-- 6l -->
+        <p>
+            Cart Quantity
+            <br>
+            <button onclick=" ViewQuantity();
+            console.log(`Cart quantity : ${cartquantity}`);">Show Quantity</button>
+            <button onclick="updateCartQuantity(1)">Add to Cart</button>
+            <button onclick="updateCartQuantity(2)">+2</button>
+            <button onclick="updateCartQuantity(3)">+3</button>
+            <button onclick="updateCartQuantity(4)">+4</button>
+            <button onclick="updateCartQuantity(5)">+5</button>
+            
+            
+            <button onclick="updateCartQuantity(-1)">remove from cart </button>
+            <button onclick="updateCartQuantity(-2)">-2</button>
+            <button onclick="updateCartQuantity(-3)">-3</button>
+            <button onclick="
+            cartquantity =0 ;
+            ViewQuantity();">Reset Cart</button>
+        </p>
+
+        <p class="view-quantity"></p>
+    </body>
+    <script>
+        let cartquantity=0;
+
+        ViewQuantity();
+        
+        function updateCartQuantity(num)
+        {
+            if(cartquantity + num > 10)
+            {
+                alert('cart quantity is full');
+                return;
+            }
+             else if(cartquantity + num < 0)
+            {
+                alert('Not enought items in the cart');
+                return;
+            }
+            else
+            {
+            cartquantity += num ;
+            document.querySelector('.view-quantity').innerHTML = `Cart quantity : ${cartquantity}`;
+            }
+        }
+
+        function ViewQuantity()
+        {
+
+          document.querySelector('.view-quantity').innerHTML = `Cart quantity : ${cartquantity}`;
+        }
+        
+    </script>
+</body>
+
+</html>

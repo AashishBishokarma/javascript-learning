@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>head and tail</title>
+    </header>
+
+    <body>
+        <button onclick="
+            playgame('Head') ">HEAD</button>
+
+        <button onclick="
+            playgame('Tail') ">TAIL</button>
+
+            <script>
+                score=JSON.parse(localStorage.getItem('score'))||{
+                    wins:0,
+                    losses:0
+                };
+
+                function playgame(PlayerMove){
+                    let random= Math.random();
+                    const computermove= random > .5  ? 'Head' : 'Tail';  //if the random number is greater than .5
+
+                    if (PlayerMove===computermove){
+                        score.wins++;
+                    }else{
+                        score.losses++;
+                    }
+                    alert(PlayerMove===computermove?`your move ${PlayerMove} .computer move ${computermove} . you win`:`your move ${PlayerMove} .computer move ${computermove} .you lose.
+wins=${score.wins} . losses=${score.losses}`)
+
+                    localStorage.setItem('score',JSON.stringify(score))
+                }
+            
+            </script>
+    </body>
+</html>

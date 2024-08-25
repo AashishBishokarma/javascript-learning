@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>DOM practice</title>
+    </header>
+    <body>
+        <p>DELIVERY CALCULATIOR</p>
+        <input placeholder="Enter the cost here" class="math"  onkeydown=" calculateOnEnter(event);
+        ">
+        <button onclick="
+            shipment();
+            ">Calculate</button>
+        <p class="update"></p>
+    </body>
+    <script>
+        String(25)
+        console.log('25'-5);
+        console.log('25'+5);
+
+
+        function calculateOnEnter(event){
+            if (event.key === 'Enter'){
+            shipment();
+        }
+        }
+
+        function shipment(){
+            const a = document.querySelector('.math');
+            let b = Number(a.value);
+            
+
+            if (b<500){
+                b = b+100;
+            }
+
+            document.querySelector('.update')
+             .innerHTML = `$${b}`;
+        }
+
+    </script>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>Objects</title>
+    </header>
+    <body>
+        <script>
+           /* let  product ={
+                name: "iPhone 13",
+                price: 900
+            };
+            console.log(product);
+            console.log(product.name);
+            console.log(product.price);
+
+            product.price=1100;
+            console.log(product);
+
+            product.newproperty = true;
+            console.log(product);
+
+            delete product.newproperty;
+            console.log(product)
+            */
+
+            /*const product2 = {
+                name : 'Laptop',
+                'delivery-date':'3 day',
+                rating: {
+                    stars:5,
+                    count : 56},
+                fun: function function1(){
+                    console.log('this is function call');
+                }
+            }
+            console.log(product2.name);
+            console.log(product2['name']);
+            console.log(product2['delivery-date']);
+
+            console.log(product2.rating.count);
+
+            product2.fun();
+
+            // function saved inside the object is called method .
+
+            console.log(typeof console.log)
+
+            // changing the js object  into js object notation 
+            console.log(JSON.stringify(product2));
+
+            // changing the js object notation to js Object
+            let json_string = JSON.stringify(product2);
+            console.log(JSON.parse(json_string));
+            */
+
+            console.log('helpme'.length);
+            console.log('helpme'.toUpperCase())
+            console.log('GETME HELP'.toLowerCase())
+            console.log('repeat '.repeat(2))
+
+            const object1 = {
+                message : 'Good morning!'
+            };
+
+            const object2 = object1;
+            console.log(object2);
+
+            const object3 ={
+                message : 'Good morning!',
+                price :455
+            };
+            console.log(object2===object1);   
+            
+            // this is destructring
+            //const message = object3.message;
+            const {message,price} = object3;
+            console.log(message,price);
+            console.log(price);
+
+            //shorthand property
+            const object5 = {
+                message,
+                //method: function function1(){
+                //     console.log('method')
+                // },
+                method(){
+                    console.log('method');
+                }
+            };
+            console.log(object5);
+            object5.method()
+
+            localStorage.setItem('going','good')
+            console.log(localStorage.getItem('going'))
+
+        </script>
+    </body>
+</html>

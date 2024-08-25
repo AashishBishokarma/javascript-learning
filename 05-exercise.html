@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <header>
+    <title>5 Exercise</title>
+  </header>
+  <body>
+    <p>CartQuantity</p>
+    <button>Show Quantity</button>
+    <button>Add to cart</button>
+    <button>+2</button>
+    <button>+3</button>
+    <!-- 5h -->
+    <button onclick="
+      quantity  += 4;
+      console.log(`CartQuantity = ${quantity}`)">+4</button>
+    <button onclick="
+    quantity  += 5;
+    console.log(`CartQuantity = ${quantity}`)">+5</button>
+    <!-- 5i -->
+    <button onclick="
+    quantity --;
+    console.log(`CartQuantity = ${quantity}`)">remove from cart</button>
+    <!-- 5j -->
+    <button onclick="
+    quantity -=2;
+    console.log(`CartQuantity = ${quantity}`)">-2</button>
+    <button onclick="
+    quantity -=3;
+    console.log(`CartQuantity = ${quantity}`)">-3</button>
+    <button>Reset Cart</button>
+    <script>
+      // 5a
+      const name = 'ashish' ;
+      console.log(name);
+      // 5b
+      console.log(`my name is :${name}`);
+      // 5c
+      const cost = 5+2*3+9;
+      console.log(cost);
+      // 5d
+      console.log(`Cost of food :$${cost}`);
+      // 5e
+      const tax = 0.1*cost;
+      console.log(tax);
+      // 5f
+      console.log(`Tax (10%): $${tax}`);
+      // 5g
+      const totalcost=tax+cost;
+      console.log(`Total cost : $${totalcost}`);
+      
+      let quantity = 0;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <header>
+    <title>exercise 10 </title>
+    <style>
+      .Cart{
+        border: none;
+        background-color: rgb(255, 216, 20);
+        color: black;
+        width: 100px;
+        padding: 5px;
+        border-radius: 50px;
+        display: block;
+      }
+      .request{
+        border: none;
+        background-color:black;
+        color: white;
+        padding: 5px;
+        
+        padding: 10px 20px ;
+        border-radius: 5px;
+      }
+      .later{
+        border: none;
+        background-color: rgb(230, 230, 230);
+        padding: 5px;
+        padding: 10px 20px;
+        border-radius: 5px;
+      }
+
+      .gaming{
+            border: none;
+            color: black;
+            background-color: rgb(222, 220, 220);
+            padding: 8px 10px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+      }
+
+      .is-toggled{
+        background-color: black;
+        color: white;
+      }
+
+      /* amazon shipping calculator */
+    .cost-input{
+          font-size: 15px;
+          /* padding-top: 10px;
+          padding-bottom: 10px;
+          padding-left: 10px; */
+          padding: 10px;
+        }
+        .calculate-button{
+          border: none;
+          color: white;
+          background-color: green;
+          padding: 12px 15px;
+          cursor: pointer;
+        }
+        .warning {
+          color: red;
+        }
+
+    </style>
+  </header>
+  <body>
+    <!-- 10a -->
+    <button class="Cart">Add to Cart</button>
+    <br>
+    <!-- 10 b -->
+    <button class="request">Request now</button>
+    <button class="later">Schedule for later</button>
+    <br><br>
+
+    <!-- 10c -->
+    <button class="js-button" onclick="test()">Test</button>
+    <br><br>
+    <!-- 10d -->
+    <!-- <button class="gaming-button gaming " onclick="gaming()">Gaming</button> -->
+
+    <br><br>
+    <!-- 10e -->
+    <button class="gaming-button gaming" onclick="toggleButton('.gaming-button')">Gaming</button>
+    <button class="music-button gaming" onclick="toggleButton('.music-button')">Music</button>
+    <button class="tech-button gaming" onclick="toggleButton('.tech-button')">Tech</button>
+    
+    <!-- 10h -->
+    <p>Amazon shipping calculator</p>
+    <input placeholder="Cost of Order" class="js-cost-input cost-input" onkeydown="
+    handleCostKeydown(event)">
+    <button onclick="
+        calculateTotal()" class="calculate-button">Calculate</button>
+    <p class="js-total-cost"></p>
+    
+
+    <script>
+      function test(){
+        const test = document.querySelector('.js-button');
+        if(test.classList.contains('js-button')){
+          console.log('class is there');
+        }
+        else{
+          console.log('no any class');
+        }
+      }
+
+      // function gaming(){
+      //   const gaming=document.querySelector('.gaming-button')
+      //   if(!gaming.classList.contains('is-toggled')){
+      //     gaming.classList.add('is-toggled');
+
+      //   }
+      //   else {
+      //   gaming.classList.remove('is-toggled');
+      // }       
+      // }
+
+      // function music(){
+      //   const music =  document.querySelector('.music-button');
+      //   if(!music.classList.contains('is-toggled')){
+      //     music.classList.add('is-toggled');
+      //   }
+      //   else
+      //   {
+      //     music.classList.remove('is-toggled');
+      //   }
+      // }
+      // function tech(){
+      //   const tech =  document.querySelector('.tech-button');
+      //   if(!tech.classList.contains('is-toggled')){
+      //       tech.classList.add('is-toggled');
+      //   }
+      //   else
+      //   {
+      //     tech.classList.remove('is-toggled');
+      //   }
+      // }
+
+      function toggleButton(selector) {
+        const button = document.querySelector(selector);
+        if (!button.classList.contains('is-toggled')) {
+
+          // Before turning this button ON, check if there's
+          // already a button that's turned ON and turn it OFF.
+          turnOffPreviousButton();
+
+          button.classList.add('is-toggled');
+        } else {
+          button.classList.remove('is-toggled');
+        }
+      }
+
+      function turnOffPreviousButton() {
+        const previousButton = document.querySelector('.is-toggled');
+        if (previousButton) {
+          previousButton.classList.remove('is-toggled');
+        }
+      }
+
+      // amazon calculator
+
+      function handleCostKeydown(event){
+        if (event.key == 'Enter') {
+            calculateTotal()}
+
+        }
+      function calculateTotal(){
+        const inputElement=document.querySelector('.js-cost-input');
+        let cost =Number(inputElement.value);
+        const output = document.querySelector(`.js-total-cost`);
+
+        if(cost > 0 &&  cost < 40){
+            cost = cost +10;
+            output.innerHTML= `$${cost}`;
+            output.classList.remove('warning');
+        }
+        else if (cost <= 0)
+        {
+          output.innerHTML= `Error : cost cannot be less than $0`;
+          output.classList.add('warning');
+        }
+        }
+                
+
+                
+    </script>
+  </body>
+</html>

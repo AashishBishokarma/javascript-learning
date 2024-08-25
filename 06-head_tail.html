@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <header>
+    <title>head tail game</title>
+  </header>
+  <body>
+
+    <button onclick="
+        // 6f
+        const randomValue = Math.random();
+        // 6h
+        let result = '';
+        // 6g
+        if(randomValue < 1/2){
+          result = 'Heads';
+        }else{
+          result = 'Tails';
+        }
+        // 6i
+        let guess = 'Heads';
+
+        if (guess === result){
+          console.log(`you guessed ${guess} .computer chose ${result}.You Win !`);
+        }
+        else{
+          console.log(`you guessed ${guess} .computer chose ${result}.You loose !`);
+        }
+
+        ">HEAD</button>
+
+    <button onclick="
+        const randomValue = Math.random();
+
+        let result = '';
+
+        if(randomValue < 1/2){
+          result = 'Heads';
+        }else{
+          result = 'Tails';
+        }
+
+        let guess = 'Tails';
+
+        if (guess === result){
+          console.log(`you guessed ${guess} .computer chose ${result}.You Win !`);
+        }
+        else{
+          console.log(`you guessed ${guess} .computer chose ${result}.You loose !`);
+        }
+
+    ">TAIL</button>
+
+    <script>
+
+    </script>
+  </body>
+</html>

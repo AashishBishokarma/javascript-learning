@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>L6 exercise</title>
+    </header>
+    <body>
+        <!-- 6k -->
+        <p>
+            Cart Quantity
+            <br>
+            <button onclick="
+            console.log(`Cart quantity : ${cartquantity}`);">Show Quantity</button>
+            <button onclick="
+            if(cartquantity + 1 > 10){
+                alert('cart quantity is full');
+            }
+            else
+            {
+            cartquantity = cartquantity + 1 ;
+            console.log(`Cart quantity : ${cartquantity}`);
+            }">Add to Cart</button>
+            <button onclick="
+            if(cartquantity+2>10){
+                alert('cart quantity is full');
+            }else{
+                cartquantity +=2 ;
+                console.log(`Cart quantity = ${cartquantity}`);
+            }">+2</button>
+            <button onclick="
+            if(cartquantity+3>10){
+                alert('cart quantity is full');
+            }else{
+                cartquantity +=3 ;
+                console.log(`Cart quantity = ${cartquantity}`);
+            }">+3</button>
+            <button onclick="
+            if(cartquantity+4>10){
+                alert('cart quantity is full');
+            }else{
+                cartquantity +=4 ;
+                console.log(`Cart quantity = ${cartquantity}`);
+            }">+4</button>
+            <button onclick="
+            if(cartquantity+5>10){
+                alert('cart quantity is full');
+            }else{
+                cartquantity +=5 ;
+                console.log(`Cart quantity = ${cartquantity}`);
+            }">+5</button>
+            
+            <button onclick="
+            if(cartquantity - 1 < 0){
+                alert('Not enought items in the cart');
+            }
+            else{
+                cartquantity -- ;
+                console.log(`Cart quantity = ${cartquantity}`);
+            }
+            ">remove from cart </button>
+            <button onclick="
+            if(cartquantity - 2 < 0){
+                alert('Not enought items in the cart');
+            }
+            else{
+                cartquantity -=2 ;
+                console.log(`Cart quantity = ${cartquantity}`);
+            2">-2</button>
+            <button onclick="
+            if(cartquantity - 3 < 0){
+                alert('Not enought items in the cart');
+            }
+            else{
+                cartquantity -=3 ;
+                console.log(`Cart quantity = ${cartquantity}`);
+            }">-3</button>
+            <button onclick="
+            cartquantity =0 ;
+            console.log(`Cart quantity = ${cartquantity}`);">Reset Cart</button>
+            <button onclick="console.log(name)">name</button>
+        </p>
+        <script>
+            // 6a
+            const hour = 23;
+            const name = 'ashish';
+            if(hour > 6 && hour < 12){
+                console.log('Good morning!');
+            }else if(hour > 13 && hour < 17){
+                console.log('Good afternoon!');
+            }else {
+                console.log('Good night!');
+            }
+            // 6b
+            if(hour > 6 && hour < 12){
+                console.log(`Its ${hour} .Good morning!`);
+            }else if(hour > 13 && hour < 17){
+                console.log(`Its ${hour} .Good afternoon!`);
+            }else {
+                console.log(`Its ${hour} .Good night!`);
+            }
+            // 6c
+            if(hour > 6 && hour < 12){
+                console.log(`Its ${hour} .Good morning! ${name}`);
+            }else if(hour > 13 && hour < 17){
+                console.log(`Its ${hour} .Good afternoon! ${name}`);
+            }else {
+                console.log(`Its ${hour} .Good night! ${name}`);
+            }
+            // 6d
+            let age = 4;
+            const isHoliday = true;
+            if ((age <= 6 || age >= 60) && !isHoliday) {
+                console.log('DISCOUNT !')
+            }
+            else {
+                console.log(`NO DISCOUNT !`)
+            }
+
+            let cartquantity =0;
+
+        </script>
+    </body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+
+<body>
+    <header>
+        <title>L6 exercise</title>
+    </header>
+
+    <body>
+        <button onclick="
+            const random = Math.random() ;
+             let result;
+            
+            //  if (random < 0.5){
+            //     result = 'Head';
+            //  }
+            //  else {
+            //     result = 'Tail';
+            //  }
+
+            (random < 0.5 ? result ='Head': result= 'Tail');
+            let guess = 'Head' ;
+            if (result===guess){
+                alert(`You Win . computer choose ${result} . you choose  ${guess}`);
+            }else{
+                alert(`YOU Lose  computer choose ${result} . you choose  ${guess}`);
+            }
+           ">HEAD</button>
+
+        <button onclick="
+            const random = Math.random() ;
+             let result ='';
+            
+             if (random < 0.5){
+                result ='Head';
+             }
+             else {
+                result ='Tail';
+             }
+            let guess = 'Tail' ;
+            if (guess===result){
+                alert(`YOU CHOOSE TAIL . COMPUTER CHOOSE ${result} . Congratulation you won!`);
+            }else{
+                alert(`YOU CHOOSE ${guess} COMPUTER CHOOSE ${result} .Sorry, try again`);
+            }">TAIL</button>
+
+        <p>
+            Cart Quantity
+            <br>
+            <button onclick="
+            console.log(`Cart quantity : ${cartquantity}`);">Show Quantity</button>
+            <button onclick="
+            if(cartquantity + 1 > 10){
+                alert('cart quantity is full');
+            }
+            else
+            {
+            cartquantity = cartquantity + 1 ;
+            console.log(`Cart quantity : ${cartquantity}`);
+            }">Add to Cart</button>
+            <button onclick="
+            if(cartquantity+2>10){
+                alert('cart quantity is full');
+            }else{
+                cartquantity +=2 ;
+                console.log(`Cart quantity = ${cartquantity}`);
+            }">+2</button>
+            <button onclick="
+            if(cartquantity+3>10){
+                alert('cart quantity is full');
+            }else{
+                cartquantity +=3 ;
+                console.log(`Cart quantity = ${cartquantity}`);
+            }">+3</button>
+            <button onclick="
+            if(cartquantity+4>10){
+                alert('cart quantity is full');
+            }else{
+                cartquantity +=4 ;
+                console.log(`Cart quantity = ${cartquantity}`);
+            }">+4</button>
+            <button onclick="
+            if(cartquantity+5>10){
+                alert('cart quantity is full');
+            }else{
+                cartquantity +=5 ;
+                console.log(`Cart quantity = ${cartquantity}`);
+            }">+5</button>
+            
+            
+            <button onclick="
+            if(cartquantity - 1 < 0){
+                alert('Not enought items in the cart');
+            }
+            else{
+                cartquantity -- ;
+                console.log(`Cart quantity = ${cartquantity}`);
+            }
+            ">remove from cart </button>
+            <button onclick="
+            if(cartquantity - 2 < 0){
+                alert('Not enought items in the cart');
+            }
+            else{
+                cartquantity -2 ;
+                console.log(`Cart quantity = ${cartquantity}`);
+            2">-2</button>
+            <button onclick="
+            if(cartquantity - 3 < 0){
+                alert('Not enought items in the cart');
+            }
+            else{
+                cartquantity -3 ;
+                console.log(`Cart quantity = ${cartquantity}`);
+            }">-3</button>
+            <button onclick="
+            cartquantity =0 ;
+            console.log(`Cart quantity = ${cartquantity}`);">Reset Cart</button>
+            <button onclick="console.log(name)">name</button>
+        </p>
+    </body>
+    <script>
+        let cartquantity = 0;
+        let hour = 16;
+        let name = 'Ashish'
+        if (hour >= 6 && hour <= 12) {
+            console.log(` ${name} Good Morning !`);
+        } else if (hour >= 13 && hour <= 17) {
+            console.log(`${name} Good Afternoon !`);
+        }
+        else {
+            console.log(`${name} Good night !`)
+        }
+
+    </script>
+    <SCRIPT>
+        let age = 4;
+        const isHoliday = true;
+        if ((age <= 6 || age >= 60) && !isHoliday) {
+            console.log('DISCOUNT !')
+        }
+        else {
+            console.log(`NO DISCOUNT !`)
+        }
+    </SCRIPT>
+    <script>
+
+    </script>
+</body>
+
+</html> -->

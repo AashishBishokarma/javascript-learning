@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Rock paper scissor</title>
+</head>
+
+<body>
+    <p>Rock Paper Scissor</p>
+    <button onclick="
+            playGame('rock');
+            ">Rock</button>
+    <button onclick="
+            playGame('paper')
+        ">Paper</button>
+
+    <button onclick="
+            playGame('scissor');
+        ">Scissor</button>
+
+    <script>
+        function playGame(PlayerMove){
+
+            const computermove = pickComputerMove();
+            let move = '';
+
+            if(PlayerMove==='scissor'){
+                if( computermove === 'scissor' ) {
+                    move = 'Tie !'
+                }else if (computermove === 'paper') {
+                    move = 'you win';
+                }else if (computermove === 'rock') {
+                    move = 'you lose';
+                }
+                
+            }else if(PlayerMove==='paper'){
+                if( computermove === 'paper' ) {
+                    move = 'Tie !'
+                }else if (computermove === 'rock') {
+                    move = 'you win';
+                }else if (computermove === 'scissor') {
+                    move = 'you lose';
+                }
+            }else if(PlayerMove==='rock'){
+                if( computermove === 'rock' ) {
+                move = 'Tie !'
+                }else if (computermove === 'scissor') {
+                    move = 'you win';
+                }else if (computermove === 'paper') {
+                    move = 'you lose';
+                }
+                }
+            alert(`YOUR MOVE ${PlayerMove} . COMPUTER MOVE ${computermove} .  ${move} the match`);
+        }
+            
+        function pickComputerMove(){
+            const randnumber= Math.random(); 
+            let computermove = '';
+            if(randnumber >=0 && randnumber<1/3){
+                computermove = 'rock';
+            } else if (randnumber >= 1/3 && randnumber < 2/3) {
+                computermove = 'paper';
+            }else if (randnumber >=2/3 && randnumber <1) {
+                computermove = 'scissor';
+            }
+            return computermove;
+        }
+    </script>
+</body>
+
+</html>

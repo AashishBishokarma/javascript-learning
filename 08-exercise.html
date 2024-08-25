@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>exercise 8</title>
+    </header>
+
+    <body>
+        <script>
+            const product1 ={
+                name:'basketball',
+                price : 3000,
+            };
+            // product1.price += 500;
+
+            product1['delivery-time']='3 days';
+            console.log(product1)
+
+            const product2 ={
+                name:'football',
+                price : 3000,
+            };
+
+            function compare(){
+                if  (product1.price > product2.price){
+                    return `Buy the ${product1.name}, it's cheaper.`;
+                }else if(product1.price == product2.price){
+                    return 'The prices are equal.'
+                } else {
+                   return `Buy the ${product2.name} ,it's more affordable.`; 
+                }
+            }
+            console.log(compare());
+
+            function isSameProduct(){
+                if (product1.price === product2.price && product1.name === product2.name ) 
+                    return true;
+                
+                else 
+                    return false;
+                
+            }
+            console.log(isSameProduct());
+
+            
+        </script>
+    </body>
+</html>

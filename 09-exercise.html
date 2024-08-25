@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<header>
+    <title>DOM exercise</title>
+</header>
+
+<body>
+    <!-- 9a -->
+    <button>9a</button>
+
+    <!-- 9b -->
+    <button class="js-button" onclick="change()">9b</button>
+
+    <!-- 9c -->
+    <button onclick="
+      document.querySelector('.js-choice')
+        .innerHTML = 'You chose: head';
+    ">heads</button>
+
+    <button onclick="
+      document.querySelector('.js-choice')
+        .innerHTML = 'You chose: tails';
+    ">tails</button>
+
+    <p class="js-choice"></p>
+
+    <!-- 9d,9e,9f -->
+
+    <input type="text"  class="js-input-naam" placeholder="enter your name"
+      onkeydown="buttondabepaxi(event)"  >
+    <button onclick="naam()">submit</button>
+
+    <p class="js-naam"></p>
+
+    <!-- 9g -->
+    <input placeholder="Cost of Order" class="js-cost-input" onkeydown="
+    handleCostKeydown(event)">
+    <button onclick="
+        calculateTotal()">Calculate</button>
+    <p class="js-total-cost"></p>
+
+    <!-- 9h -->
+    <input placeholder="Type something" class="js-input"
+    onkeyup="
+      const inputElement = document.querySelector('.js-input');
+
+      document.querySelector('.js-message')
+        .innerHTML = inputElement.value;
+    ">
+
+    <p class="js-message"></p>
+
+    
+
+    <script>
+        console.log(document.querySelector('button'));
+
+        function change() {
+            document.querySelector('.js-button').innerHTML = '9b done!';
+        }
+
+        // 9d,9e,9f
+
+        function naam(){
+
+            const inputnaam=document.querySelector('.js-input-naam');
+            let naam = inputnaam.value;
+            
+
+            document.querySelector(`.js-naam`).innerHTML = `Your name is : ${naam}`;
+        }
+
+        function buttondabepaxi(event){
+            if(event.key == 'Enter'){
+                naam();
+            }
+        }
+        
+
+        // 9g
+        function handleCostKeydown(event){
+                if (event.key == 'Enter') {
+                    calculateTotal();
+                }
+        
+            }
+
+            function calculateTotal(){
+                const inputElement=document.querySelector('.js-cost-input');
+
+                let cost =Number(inputElement.value);
+
+                if(cost < 40){
+                    cost = cost +10;
+                }
+
+                cost = Math.round(cost * 100) / 100;
+
+                document.querySelector(`.js-total-cost`)
+                    .textContent = `$${cost.toFixed(2)}`;
+            }
+
+        // console.log(document.querySelector('.head').innerHTML);
+        // console.log(document.querySelector('.tail').innerHTML);
+    </script>
+</body>
+
+</html>
