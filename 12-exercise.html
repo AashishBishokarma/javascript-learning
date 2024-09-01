@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>12 exercise</title>
+    </head>
+    <body>
+      <!-- <button class="button" onclick="startTimeout()">change to finished !</button> -->
+
+      <button onclick="finishedTimeout()">Add to cart</button>
+      <p class="js-text"></p>
+
+      <button onclick="
+        messages++;
+      ">Add</button>
+
+      <button onclick="
+        messages--;
+      ">Remove</button>
+        <script>
+        // 12a
+        // function add(a,b){
+        //   console.log(a+b);
+        // }
+        // add(3,5);
+
+
+        // 12b
+
+        // function runTwice(fun){
+        //   fun();
+        //   fun();
+        // }
+        //  function mania(){
+        //   console.log('hellow world');
+        // }
+        // runTwice(mania)
+
+        // 12c , 12d
+        // function startTimeout(){
+        //   let button = document.querySelector('.button')
+        //   clearTimeout(function finished(){
+        //   button.innerHTML = "Finished!"
+        //   console.log(button.innerHTML);
+        // },1000)
+        //   button.innerHTML = 'Loading...';
+        // }
+        
+        // 12e
+        // function finishedTimeout(){
+        //   let message = document.querySelector('.js-text')
+        //   message.innerHTML='Added';
+        //   setTimeout(function (){
+        //     message.innerHTML='';
+        //   },2000)
+          
+        //   console.log(message.innerHTML);
+        // }
+
+        // 12f
+        // let timeoutId;
+
+        // function finishedTimeout() {
+        //     let message = document.querySelector('.js-text');
+        //     message.innerHTML = 'Added';
+
+        //     // Clear any previous timeout
+        //     if (timeoutId) {
+        //         clearTimeout(timeoutId);
+        //     }
+
+        //     // Set a new timeout
+        //     timeoutId = setTimeout(function () {
+        //         message.innerHTML = '';
+        //     }, 2000);
+
+        //     console.log(message.innerHTML);
+        // }
+
+        // 12g
+         
+        // let title = document.querySelector('.title')
+        // let num=0;
+        // // title.innerHTML = '(1) exercise';
+        // // for(let i =1 ;i<3 ;i++){
+        // //   title.innerHTML = `${i} exercise`
+        // // }
+        // setInterval(function (){
+        //   if (num < 3) {
+        //       num++;  // Increment the number by 1
+        //     } else {
+        //       num = 1;  // Reset to 1 when it reaches 3
+        //     }
+          
+        //   title.innerHTML = `(${num}) exercise`;
+          
+        // },1000)
+
+
+        // 12h
+        
+      //   let messages = 2;
+
+      // setInterval(function() {
+      //   if (document.title === 'App') {
+          
+      //     document.title = `(${messages}) New messages`;
+      //   } else {
+          
+      //     document.title = 'App';
+      //   }
+      // }, 1000);
+
+      // 11i
+
+      let messages = 2;
+
+
+      setInterval(function() {
+        if (document.title === 'App') {
+          
+          document.title = `(${messages}) New messages`;
+        } else {
+          
+          document.title = 'App';
+        }
+      }, 1000);
+         </script>
+    </body>
+</html>  
