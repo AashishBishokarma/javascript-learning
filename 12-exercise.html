@@ -45,17 +45,17 @@
         // runTwice(mania)
 
         // 12c , 12d
-        // function startTimeout(){
-        //   let button = document.querySelector('.button')
-        //   clearTimeout(function finished(){
-        //   button.innerHTML = "Finished!"
-        //   console.log(button.innerHTML);
-        // },1000)
-        //   button.innerHTML = 'Loading...';
+      //  const startTimeout = () =>{
+      //     let button = document.querySelector('.button')
+      //     clearTimeout(function finished(){
+      //     button.innerHTML = "Finished!"
+      //     console.log(button.innerHTML);
+      //   },1000)
+      //     button.innerHTML = 'Loading...';
         // }
         
         // 12e
-        // function finishedTimeout(){
+        // const finishedTimeout = () => {
         //   let message = document.querySelector('.js-text')
         //   message.innerHTML='Added';
         //   setTimeout(function (){
@@ -68,7 +68,7 @@
         // 12f
         // let timeoutId;
 
-        // function finishedTimeout() {
+        //      const finishedTimeout = () => {
         //     let message = document.querySelector('.js-text');
         //     message.innerHTML = 'Added';
 
@@ -87,22 +87,22 @@
 
         // 12g
          
-        // let title = document.querySelector('.title')
-        // let num=0;
-        // // title.innerHTML = '(1) exercise';
-        // // for(let i =1 ;i<3 ;i++){
-        // //   title.innerHTML = `${i} exercise`
-        // // }
-        // setInterval(function (){
-        //   if (num < 3) {
-        //       num++;  // Increment the number by 1
-        //     } else {
-        //       num = 1;  // Reset to 1 when it reaches 3
-        //     }
+        let title = document.querySelector('.title')
+        let num=0;
+        // title.innerHTML = '(1) exercise';
+        // for(let i =1 ;i<3 ;i++){
+        //   title.innerHTML = `${i} exercise`
+        // }
+        const setInterval = () =>(function (){
+          if (num < 3) {
+              num++;  // Increment the number by 1
+            } else {
+              num = 1;  // Reset to 1 when it reaches 3
+            }
           
-        //   title.innerHTML = `(${num}) exercise`;
+          title.innerHTML = `(${num}) exercise`;
           
-        // },1000)
+        },1000)
 
 
         // 12h
@@ -119,46 +119,124 @@
       //   }
       // }, 1000);
 
-      // 11i
+      // 12i
 
-      let messages = 2;
+      //       let messages = 2;
 
-// Save the intervalId in case we need to cancel it.
-let intervalId;
+      // // Save the intervalId in case we need to cancel it.
+      // let intervalId;
 
-// We'll use this variable to keep track of whether
-// or not we're displaying the notification.
-let isDisplayingNotification;
+      // // We'll use this variable to keep track of whether
+      // // or not we're displaying the notification.
+      // let isDisplayingNotification;
 
-// Start displaying the notification in the tab
-// when the page first loads.
-displayNotification();
+      // // Start displaying the notification in the tab
+      // // when the page first loads.
+      // displayNotification();
 
-function displayNotification() {
-  // If we're already displaying the notification,
-  // stop this function because we don't want to
-  // create 2 intervals at the same time.
-  if (isDisplayingNotification) {
-    return;
-  }
+      // function displayNotification() {
+      //   // If we're already displaying the notification,
+      //   // stop this function because we don't want to
+      //   // create 2 intervals at the same time.
+      //   if (isDisplayingNotification) {
+      //   return;
+      //   }
 
-  isDisplayingNotification = true;
+      //   isDisplayingNotification = true;
 
-  intervalId = setInterval(function() {
-    if (document.title === 'App') {
-      document.title = `(${messages}) New messages`;
-    } else {
-      document.title = 'App';
-    }
-  }, 1000);
-}
+      //   intervalId = setInterval(function() {
+      //   if (document.title === 'App') {
+      //     document.title = `(${messages}) New messages`;
+      //   } else {
+      //     document.title = 'App';
+      //   }
+      //   }, 1000);
+      //   }
 
-function stopNotification() {
-  isDisplayingNotification = false;
+      //   function stopNotification() {
+      //   isDisplayingNotification = false;
 
-  clearInterval(intervalId);
-  document.title = 'App';
-}
+      //   clearInterval(intervalId);
+      //   document.title = 'App';
+      //   }
+
+
+      // exercise 12 part 2
+
+
+      // 12j
+      // const multiply = (a,b) =>{return a*b};
+
+      // console.log( multiply(2,3));
+      // console.log(multiply(7,10));
+      
+      // 12k
+      // const multiply = (a,b) => a*b;
+
+      // console.log( multiply(2,3));
+      // console.log(multiply(7,10));
+
+      // 12l
+    //   let positiveCount = 0;
+    //   [1,-3,5].forEach((value,index)=>{
+    //     if(value >0){
+    //       positiveCount++;
+    //     }
+    //   }
+    // )
+    // console.log(positiveCount);
+
+    // function countPositive(num){
+    //   let positiveCount = 0;
+    //   num.forEach((value) => {
+    //     if(value >0){
+    //       positiveCount++;
+    //     }
+    //   });
+    //   return positiveCount;
+    // }
+
+
+    // console.log(countPositive([-2,3,-5,7,10]));
+
+    // 12m
+    // function addNum(arr,num){
+
+    //   return arr.map((value)=> value + num) 
+        
+    // };
+
+
+    // console.log(addNum([1,2,3],2));
+    // console.log(addNum([-2,-1,0,99],2));
+
+
+    // 12n
+
+    // function removeEgg(foods){
+    //   return foods.filter((value) => {
+    //       return  value !== 'eggs';      
+    //   })
+    // }
+    // console.log(removeEgg(['eggs','apple','eggs','eggs','ham']));
+
+    // 12o
+    // function removeEgg(foods){
+    //   let eggsRemoved=0;
+    //   return foods.filter((food) => {
+    //       if (food === 'eggs' && eggsRemoved < 2){
+    //         eggsRemoved ++ ;
+    //         return false ;
+    //       }
+    //       return true;
+    //   });
+    // }
+    // console.log(removeEgg(['eggs','apple','eggs','eggs','ham']));
+   
+    // 12p
+    
+
+
          </script>
     </body>
 </html>  
