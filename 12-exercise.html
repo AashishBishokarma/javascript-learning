@@ -4,7 +4,7 @@
         <title>12 exercise</title>
     </head>
     <body>
-      <!-- <button class="button" onclick="startTimeout()">change to finished !</button> -->
+      <button class="button">change to finished !</button>
 
       <button onclick="finishedTimeout()">Add to cart</button>
       <p class="js-text"></p>
@@ -45,14 +45,18 @@
         // runTwice(mania)
 
         // 12c , 12d
-      //  const startTimeout = () =>{
-      //     let button = document.querySelector('.button')
-      //     clearTimeout(function finished(){
-      //     button.innerHTML = "Finished!"
-      //     console.log(button.innerHTML);
-      //   },1000)
-      //     button.innerHTML = 'Loading...';
-        // }
+
+        document.querySelector('.button')
+          .addEventListener('click',startTimeout());
+
+       const startTimeout = () =>{
+          let button = document.querySelector('.button')
+          clearTimeout(function finished(){
+          button.innerHTML = "Finished!"
+          console.log(button.innerHTML);
+        },1000)
+          button.innerHTML = 'Loading...';
+        }
         
         // 12e
         // const finishedTimeout = () => {
